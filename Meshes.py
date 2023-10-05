@@ -1,34 +1,37 @@
-def ReckMesh4Qumode():
-    qml.Squeezing(v[0], 0.0, wires=0)
-    qml.Squeezing(v[1], 0.0, wires=1)
-    qml.Squeezing(v[2], 0.0, wires=2)
-    qml.Squeezing(v[3], 0.0, wires=3)
+def ReckMesh4Qumode_encode():
+    qml.Squeezing(x[0], 0.0, wires=0)
+    qml.Squeezing(x[1], 0.0, wires=1)
+    qml.Squeezing(x[2], 0.0, wires=2)
+    qml.Squeezing(x[3], 0.0, wires=3)
 
-    qml.Beamsplitter(v[4], v[5], wires=[2,3])
+    qml.Beamsplitter(x[4], x[5], wires=[2,3])
 
-    qml.Beamsplitter(v[6], v[7], wires=[1,2])
+    qml.Beamsplitter(x[6], x[7], wires=[1,2])
 
-    qml.Beamsplitter(v[8], v[9], wires=[0,1])
-    qml.Beamsplitter(v[10], v[11], wires=[2,3])
+    qml.Beamsplitter(x[8], x[9], wires=[0,1])
+    qml.Beamsplitter(x[10], x[11], wires=[2,3])
 
-    qml.Rotation(v[12], wires=0)
-    qml.Beamsplitter(v[13], v[14], wires=[1,2])
+    qml.Rotation(x[12], wires=0)
+    qml.Beamsplitter(x[13], x[14], wires=[1,2])
 
-    qml.Displacement(v[15], 0.0, wires=0)
-    qml.Rotation(v[16], wires=1)
-    qml.Beamsplitter(v[17], v[18], wires=[2,3])
+    qml.Displacement(x[15], 0.0, wires=0)
+    qml.Rotation(x[16], wires=1)
+    qml.Beamsplitter(x[17], x[18], wires=[2,3])
 
-    qml.Kerr(v[19], wires=0)
-    qml.Displacement(v[20], 0.0, wires=1)
-    qml.Rotation(v[21], wires=2)
-    qml.Rotation(v[22], wires=3)
+    qml.Kerr(x[19], wires=0)
+    qml.Displacement(x[20], 0.0, wires=1)
+    qml.Rotation(x[21], wires=2)
+    qml.Rotation(x[22], wires=3)
 
-    qml.Kerr(v[23], wires=1)
-    qml.Displacement(v[24], 0.0, wires=2)
-    qml.Displacement(v[25], 0.0, wires=3)
+    qml.Kerr(x[23], wires=1)
+    qml.Displacement(x[24], 0.0, wires=2)
+    qml.Displacement(x[25], 0.0, wires=3)
 
-    qml.Kerr(v[26], wires=2)
-    qml.Kerr(v[27], wires=3)
+    qml.Kerr(x[26], wires=2)
+    qml.Kerr(x[27], wires=3)
+
+
+def ReckMesh4Qumode_layer():
 
     qml.Beamsplitter(v[28], v[29], wires=[2,3])
 
@@ -83,36 +86,39 @@ def ReckMesh4Qumode():
     qml.Kerr(v[75], wires=3)
 
 
-def ClementsMesh4Qumode():
-    qml.Squeezing(v[0], 0.0, wires=0)
-    qml.Squeezing(v[1], 0.0, wires=1)
-    qml.Squeezing(v[2], 0.0, wires=2)
-    qml.Squeezing(v[3], 0.0, wires=3)
+def ClementsMesh4Qumode_encode():
+    qml.Squeezing(x[0], 0.0, wires=0)
+    qml.Squeezing(x[1], 0.0, wires=1)
+    qml.Squeezing(x[2], 0.0, wires=2)
+    qml.Squeezing(x[3], 0.0, wires=3)
 
-    qml.Beamsplitter(v[4], v[5], wires=[0,1])
-    qml.Beamsplitter(v[6], v[7], wires=[2,3])
+    qml.Beamsplitter(x[4], x[5], wires=[0,1])
+    qml.Beamsplitter(x[6], x[7], wires=[2,3])
 
-    qml.Beamsplitter(v[8], v[9], wires=[1,2])
+    qml.Beamsplitter(x[8], x[9], wires=[1,2])
 
-    qml.Beamsplitter(v[10], v[11], wires=[0,1])
-    qml.Beamsplitter(v[12], v[13], wires=[2,3])
+    qml.Beamsplitter(x[10], x[11], wires=[0,1])
+    qml.Beamsplitter(x[12], x[13], wires=[2,3])
 
-    qml.Rotation(v[14], wires=0)
-    qml.Beamsplitter(v[15], v[16], wires=[1,2])
-    qml.Rotation(v[17], wires=3)
+    qml.Rotation(x[14], wires=0)
+    qml.Beamsplitter(x[15], x[16], wires=[1,2])
+    qml.Rotation(x[17], wires=3)
 
-    qml.Displacement(v[18], 0.0, wires=0)
-    qml.Rotation(v[19], wires=1)
-    qml.Rotation(v[20], wires=2)
-    qml.Displacement(v[21], 0.0, wires=3)
+    qml.Displacement(x[18], 0.0, wires=0)
+    qml.Rotation(x[19], wires=1)
+    qml.Rotation(x[20], wires=2)
+    qml.Displacement(x[21], 0.0, wires=3)
 
-    qml.Kerr(v[22], wires=0)
-    qml.Displacement(v[23], 0.0, wires=1)
-    qml.Displacement(v[24], 0.0, wires=2)
-    qml.Kerr(v[25], wires=3)
+    qml.Kerr(x[22], wires=0)
+    qml.Displacement(x[23], 0.0, wires=1)
+    qml.Displacement(x[24], 0.0, wires=2)
+    qml.Kerr(x[25], wires=3)
 
-    qml.Kerr(v[26], wires=1)
-    qml.Kerr(v[27], wires=2)
+    qml.Kerr(x[26], wires=1)
+    qml.Kerr(x[27], wires=2)
+
+
+def ClementsMesh4Qumode_layer():
 
     qml.Beamsplitter(v[28], v[29], wires=[0,1])
     qml.Beamsplitter(v[30], v[31], wires=[2,3])
