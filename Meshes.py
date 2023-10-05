@@ -30,6 +30,8 @@ def ReckMesh4Qumode_encode():
     qml.Kerr(x[26], wires=2)
     qml.Kerr(x[27], wires=3)
 
+    qml.draw()
+
 
 def ReckMesh4Qumode_layer():
 
