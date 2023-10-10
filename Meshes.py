@@ -1,4 +1,4 @@
-def ReckMesh4Qumode_encode():
+def ReckMesh4Qumode_encode(x):
     qml.Squeezing(x[0], x, wires=0)
     qml.Squeezing(x[1], x, wires=1)
     qml.Squeezing(x[2], x, wires=2)
@@ -34,7 +34,7 @@ def ReckMesh4Qumode_encode():
     #exit()
 
 
-def ReckMesh4Qumode_layer():
+def ReckMesh4Qumode_layer(v):
 
     qml.Beamsplitter(v[28], v[29], wires=[2,3])
 
@@ -92,7 +92,7 @@ def ReckMesh4Qumode_layer():
     exit()
 
 
-def ClementsMesh4Qumode_encode():
+def ClementsMesh4Qumode_encode(x):
     qml.Squeezing(x[0], x, wires=0)
     qml.Squeezing(x[1], x, wires=1)
     qml.Squeezing(x[2], x, wires=2)
@@ -124,7 +124,7 @@ def ClementsMesh4Qumode_encode():
     qml.Kerr(x[27], wires=2)
 
 
-def ClementsMesh4Qumode_layer():
+def ClementsMesh4Qumode_layer(v):
 
     qml.Beamsplitter(v[28], v[29], wires=[0,1])
     qml.Beamsplitter(v[30], v[31], wires=[2,3])
