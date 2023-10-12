@@ -1,3 +1,5 @@
+import pennylane as qml
+
 def ReckMesh4Qumode_encode(x):
     qml.Squeezing(x[0], x, wires=0)
     qml.Squeezing(x[1], x, wires=1)
@@ -88,8 +90,8 @@ def ReckMesh4Qumode_layer(v):
     qml.Kerr(v[74], wires=2)
     qml.Kerr(v[75], wires=3)
 
-    qml.draw()
-    exit()
+    #qml.draw()
+    #exit()
 
 
 def ClementsMesh4Qumode_encode(x):
