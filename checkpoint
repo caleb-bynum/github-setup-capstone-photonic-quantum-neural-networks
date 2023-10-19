@@ -1,2 +1,2 @@
-model_checkpoint_path: "CV_2_qumodes_co4"
-all_model_checkpoint_paths: "CV_2_qumodes_co4"
+model_checkpoint_path: "RML_CV_4_qumodes_co4"
+all_model_checkpoint_paths: "RML_CV_4_qumodes_co4"
