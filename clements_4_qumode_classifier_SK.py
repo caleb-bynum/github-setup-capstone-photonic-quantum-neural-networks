@@ -199,7 +199,7 @@ num_modes = 4
 cutoff_dim = 2
 
 # select a devide 
-dev = qml.device("strawberryfields.fock", wires=num_modes, cutoff_dim=cutoff_dim) 
+dev = qml.device("strawberryfields.tf", wires=num_modes, cutoff_dim=cutoff_dim) 
 
 @qml.qnode(dev, interface="tf")
 def quantum_nn(inputs, var):
