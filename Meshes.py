@@ -179,3 +179,7 @@ def ClementsMesh4Qumode_layer(v):
     qml.Kerr(v[75], wires=3)
 
     qml.draw()
+
+
+    def DiamondMesh4Qumode_encode(x):
+        qml.Squeezing(x[0],)
